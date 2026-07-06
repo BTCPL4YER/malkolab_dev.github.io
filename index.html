@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/main.css" />
+
+<!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="images/icons/site.webmanifest">
+    <meta name="theme-color" content="#1b1f33">
+
+<title>Malko Labs</title>
+</head>
+<body>
+  <main class="wrap">
+    <header class="nav">
+      <div class="logo">OMFluX</div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="site-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <!--<li><a href="#">PROJECTS</a></li>--> <!--under development-->
+          <li><a href="/pages/about.html">ABOUT</a></li>
+          <!--<li><a href="/pages/contacts.html">CONTACTS</a></li>--> <!--under development-->
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">MALKO LABS</div>
+        <h1>I Design The<br>Future</h1>
+        <div class="subtitle">Creative web design, UI/UX, and digital experiences</div>
+        <div class="buttons">
+          <a class="btn primary" href="#">View Projects</a>
+          <a class="btn outline" href="mailto:omflux@gmail.com">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="images/Building the digital world together.png" alt="image" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+    </section>
+
+    <section class="section-title" style="font-size: larger; font-weight: 600;">What I’m Building &amp; Learning</section>
+    <br>
+    <section class="section-desc">
+      I’m developing my skills in UI/UX design and web development, focusing on clean interfaces, usability, and responsive layouts.
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <img src="images/Logo/Artist's palette and paintbrush set.png" alt="image" class="icon" style="width: 90px; height: 70px; padding: 5px 0 0 0; margin-left: -20px;">
+
+        <h3 style="margin: 0 0 -20px 0;">UI/UX Design</h3>
+        <p>Designing user-friendly and responsive interfaces with focus on usability, layout structure, and visual hierarchy.</p>
+      </article>
+      <article class="card">
+        <img src="images/Logo/Modern laptop with WordPress logo.png" alt="image" class="icon" style="width: 90px; height: 70px; padding: 5px 0 0 0;">
+        <h3 style="margin: 0 0 -20px 0;">Web Development &amp; WordPress</h3>
+        <p>Building responsive websites using HTML, CSS, JavaScript, and WordPress while keeping performance and user experience in mind.</p>
+      </article>
+      <article class="card">
+        <img src="images/Logo/Rocket in orbit with arrows.png" alt="image" class="icon" style="width: 90px; height: 70px; padding: 5px 0 0 0; margin-left: -20px;">
+        <h3 style="margin: 0 0 -20px 0;">Continuous Improvement</h3>
+        <p>Learning and improving every day by practicing real projects and exploring modern tools and techniques.</p>
+      </article>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h3>Let’s work together</h3>
+        <p>Need a modern website or UI design? Let’s turn your ideas into a real, functional experience.</p>
+      </div>
+      <a class="btn outline" href="#">Contact Me</a>
+    </section>
+
+    <footer class="footer">
+      <div class="logo" style="margin: 0 0 10px;">OMFluX</div>
+      <div>Where creativity meets futuristic digital experiences.</div>
+      <div class="socials">
+        <span>GH</span>
+        <span>FB</span>
+        <span>IN</span>
+        <span>X</span>
+      </div>
+      <div>2026 Malko Labs. All rights reserved.</div>
+    </footer>
+  </main>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.classList.toggle('open');
+        navLinks.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+
+    const magneticBtn = document.querySelector('.btn.primary');
+
+    if (magneticBtn) {
+      magneticBtn.addEventListener('mousemove', (e) => {
+        const rect = magneticBtn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        magneticBtn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+      });
+
+      magneticBtn.addEventListener('mouseleave', () => {
+        magneticBtn.style.transform = "translate(0, 0)";
+      });
+    }
+
+    const contactBtn = document.querySelector('.btn.outline');
+
+    if (contactBtn) {
+      contactBtn.addEventListener('mousemove', (e) => {
+        const rect = contactBtn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        contactBtn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+      });
+
+      contactBtn.addEventListener('mouseleave', () => {
+        contactBtn.style.transform = "translate(0, 0)";
+      });
+    }
+  </script>
+</body>
+</html>

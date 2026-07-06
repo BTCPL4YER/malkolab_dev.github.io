@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/main.css" />
+
+<!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="images/icons/site.webmanifest">
+    <meta name="theme-color" content="#1b1f33">
+
+<title>Malko Labs</title>
+</head>
+<body>
+  <main class="wrap">
+    <header class="nav">
+      <div class="logo">OMFluX</div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="site-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li> 
+          <!--<li><a href="#">PROJECTS</a></li>--> <!--under development-->
+          <li><a href="about.html">ABOUT</a></li>
+          <!--<li><a href="/pages/contacts.html">CONTACTS</a></li>--> <!--under development-->
+        </ul>
+      </nav>
+    </header>
+
+
+
+    <section class="cards">
+      <article class="card">
+        <img src="images/AI Peoples/Fake Ous.png" alt="image" class="icon" style="width: 526px; height: 250px; border: solid beige; width: 290px ; border-radius: 10px; height: 350px; display: flex; margin: 0 auto; align-items: center;">
+
+        <h3 style="margin: 0 0 -20px 0; font-size: 18px; padding: 20px 0 20px 0;">Ousmane</h3>
+        <p style="font-size: 20px;">Web Developer • System Optimization • Creative Tech Builder</p>
+        
+      </article>
+      <article class="card">
+        
+        <h3 style="margin: 0 0 -20px 0; font-size: 18px;">About Me</h3>
+        <p style="font-size: 20px;">Passionate web developer and creative tech builder focused on websites, system optimization, troubleshooting, and digital experiences. Founder of Malko Labs, a personal portfolio and creative technology brand focused on modern web projects and creative digital platforms.
+Currently improving skills in programming, cybersecurity, and computer hardware while building real-world projects and learning through hands-on experience.</p>
+      </article>
+
+      <article class="card">
+        
+        <h3 style="margin: 0 0 -20px 0; font-size: 18px;">Education</h3>
+        <p style="font-size: 18px;">Self-Taught Developer & IT Learner</p>
+        <br>
+        <hr>
+        <br>
+        <p style="font-size: 20px;">Focused on:</p>
+        <ul class="edu-list">
+          <li>Web Development</li>
+          <li>System Optimization</li>
+          <li>Technical Troubleshooting</li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+        <p style="font-size: 20px;">Learning through:</p>
+        <ul class="edu-list">
+          <li>Cybersecurity Fundamentals</li>
+          <li>Python Programming</li>
+          <li>Online courses</li>
+          <li>Practice projects</li>
+          <li>Independent research</li>
+          <li>Real-world experimentation</li>
+        </ul>
+      </article>
+    </section>
+
+    
+
+    <footer class="footer">
+      <div class="logo" style="margin: 0 0 10px;">OMFluX</div>
+      <div>Where creativity meets futuristic digital experiences.</div>
+      <div class="socials">
+        <span>GH</span>
+        <span>FB</span>
+        <span>IN</span>
+        <span>X</span>
+      </div>
+      <div>2026 Malko Labs. All rights reserved.</div>
+    </footer>
+  </main>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.classList.toggle('open');
+        navLinks.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+
+    const magneticBtn = document.querySelector('.btn.primary');
+
+    if (magneticBtn) {
+      magneticBtn.addEventListener('mousemove', (e) => {
+        const rect = magneticBtn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        magneticBtn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+      });
+
+      magneticBtn.addEventListener('mouseleave', () => {
+        magneticBtn.style.transform = "translate(0, 0)";
+      });
+    }
+
+    const contactBtn = document.querySelector('.btn.outline');
+
+    if (contactBtn) {
+      contactBtn.addEventListener('mousemove', (e) => {
+        const rect = contactBtn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        contactBtn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+      });
+
+      contactBtn.addEventListener('mouseleave', () => {
+        contactBtn.style.transform = "translate(0, 0)";
+      });
+    }
+  </script>
+</body>
+</html>
